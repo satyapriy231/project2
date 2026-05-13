@@ -1,0 +1,218 @@
+﻿/* --- SATYAPRIY BRANDING & LAYOUT --- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 1. Header Area */
+header {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 50px 15px;
+    border-top: 8px solid #ff8c00; /* Signature Orange */
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+header h1 {
+    font-size: 3.5rem;
+    color: #003366; /* Deep Professional Blue */
+    letter-spacing: 4px;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+/* 2. Main Layout Container */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.content { flex: 3; }
+
+/* 3. Section Cards (White Boxes) */
+.section-card {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.title {
+    font-size: 1.6rem;
+    color: #ff8c00;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 800;
+    border-bottom: 2px dashed #eee;
+    padding-bottom: 15px;
+}
+
+.instruction-text {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #666;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* 4. Home Page Semester Grid (Fixed & Improved) */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 side-by-side boxes */
+    gap: 20px;
+}
+
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    background: #fff;
+    border: 2px solid #333; /* Bold borders as per your UI style */
+    color: #333;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.2rem;
+    border-radius: 6px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    text-transform: uppercase;
+}
+
+.grid-item:hover {
+    background-color: #003366;
+    color: #ffffff;
+    border-color: #003366;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 51, 102, 0.2);
+}
+
+/* 5. Semester Page specific: Paper Boxes */
+.paper-box {
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.paper-title {
+    background: #003366;
+    color: white;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.subject-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.subject-item:last-child { border-bottom: none; }
+
+/* 6. Buttons (View & Download) */
+.btn-group { display: flex; gap: 12px; }
+
+.btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.btn-v {
+    background: white;
+    color: #003366;
+    border: 2px solid #003366;
+}
+
+.btn-v:hover { background: #003366; color: white; }
+
+.btn-d {
+    background: #ff8c00;
+    color: white;
+    border: 2px solid #ff8c00;
+}
+
+.btn-d:hover { background: #e67e00; border-color: #e67e00; }
+
+/* 7. Sidebar Styling */
+.sidebar { flex: 1; min-width: 280px; }
+
+.side-title {
+    background: #ff8c00;
+    color: white;
+    padding: 18px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.side-nav {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+}
+
+.side-nav a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #444;
+    border-bottom: 1px solid #f0f0f0;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.side-nav a:hover {
+    color: #ff8c00;
+    background: #f9f9f9;
+    padding-left: 25px;
+}
+
+/* 8. Footer */
+footer {
+    text-align: center;
+    padding: 50px;
+    margin-top: 60px;
+    background: #fff;
+    border-top: 1px solid #eee;
+    color: #888;
+}
+
+/* 9. Mobile Responsiveness (IMP) */
+@media (max-width: 850px) {
+    .container { flex-direction: column; }
+    .grid-container { grid-template-columns: 1fr; } /* Stack semesters on mobile */
+    .subject-item { flex-direction: column; align-items: flex-start; gap: 15px; }
+    .btn-group { width: 100%; }
+    .btn { flex: 1; }
+    header h1 { font-size: 2.5rem; }
+}
